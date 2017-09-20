@@ -1,0 +1,5 @@
+.textarea{
+	width: 80%;
+	height: 300px;
+	border: 1px soiled green;
+}

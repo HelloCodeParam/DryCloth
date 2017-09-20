@@ -1,0 +1,32 @@
+<view class="continer">
+	<text>对话框</text>
+	<modal title="标题" hidden="{{modelhidden}}" confirm-text="确定" cancle-text="取消" bindconfirm="submit" bindcancel="reset">
+		<view class="all">
+			<view class="left"><icon type="warn" size="40"></icon><text>这是第二行文本</text></view>
+		</view>
+	</modal>
+	<button bindtap="alertshow" type="warn">弹出对话款</button>
+
+	<text>做UI令人头疼的图文并排混排</text>
+	<view class="tuwen">
+		<icon class="icon_warn" type="warn" size="{{size}}"></icon>
+		<text>这是简单的图文混排</text>
+	</view>
+
+	<text>地图控件的使用</text>
+	<map id="map" longitude="113.324520" latitude="23.099994" scale="14" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;" bindtap="clickMap"></map>
+
+	<view class="use_map">
+		<textarea>
+			Map中，起初的longitude和latitude是一打开地图的初始画面，其中还有很多的属性：
+			markers标记，可以标记很多的地点，这就是后来对于商家入驻打开地图，就是这个原理，markers是一个数组形式（因为可以标记很多家），每一个markers都有很多的属性，比如常见的一些图标，图标大小信息还有地址信息（经纬度），包括id等信息。
+			polyline: 这是线路属性，也是一个数组也有很多属性，最主要的就每根线要写两个地址，一个是出发的地址，和一个目的地。 可以选择线路的颜色，包括线路的虚线还是实线，包括是否添加箭头等信息。
+			show-location：该属性只要写上就行，实时显示现在的位置，这个是根据自己的移动而改变的，而所有的标记当中，是不会随着自己的移动而移动的。
+		</textarea>
+	</view>
+
+	<button type="warn" bindtap="equals">比较字符串</button>
+
+	<button type="warn" bindtap="gonext">GoNext</button>
+
+</view>

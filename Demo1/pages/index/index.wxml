@@ -1,0 +1,77 @@
+<view class="continer">
+	<text>横向排布</text>
+	<view class="flex-wrp">
+		<view class="flex-item bc_green"></view>
+		<view class="flex-item bc_yellow"></view>
+		<view class="flex-item bc_red"></view>
+	</view>
+
+	<text>Vertical ScrollView</text>
+	<scroll-view scroll-y="true" class="sco-y">
+		<view class="bc_green">
+			<text class="text-item">绿色</text>
+		</view>
+		<view class="bc_yellow">
+			<text class="text-item">黄色</text>
+		</view>
+		<view class="bc_red">
+			<text class="text-item">红色</text>
+		</view>
+	</scroll-view>
+	
+	<text>Row ScrollView ( 暂时无效 )</text>
+	<scroll-view scroll-x="true" class="sco-x">
+		<view class="row_item">
+			<text>1</text>
+		</view>
+		<view class="row_item">
+			<text>2</text>
+		</view>
+		<view class="row_item">
+			<text>3</text>
+		</view>
+	</scroll-view>
+
+	<text>BindScroll</text>
+	<scroll-view bindscroll="scroll" scroll-y="true" class="sco-y">
+		<view class="bc_green">
+			<text class="text-item">绿色</text>
+		</view>
+		<view class="bc_yellow">
+			<text class="text-item">黄色</text>
+		</view>
+		<view class="bc_red">
+			<text class="text-item">红色</text>
+		</view>
+	</scroll-view>
+
+	<text>WX:FOR</text>
+	<block wx:for="{{array}}" wx:for-item="item">
+		<view class="array_item">
+			<view>序列：{{index}}</view>
+			<view>姓名：{{item.name}}</view>
+			<view>年龄：{{item.age}}</view>
+			<view>学校：{{item.school}}</view>
+		</view>
+	</block>
+
+	<text>WX:IF</text>
+	<view>
+		<block wx:if="{{number == 2}}">
+		<text>number == 2</text>
+		</block>
+		<block wx:elif="{{number == 5}}">
+			<text>number == 5</text>
+		</block>
+		<block wx:elif="{{number == 10}}">
+			<text>number == 10</text>
+		</block>
+	</view>
+
+	<text>NavigateTo with Options</text>
+	<button bindtap="btn_click">
+		navigateTo
+	</button>
+	
+
+</view>

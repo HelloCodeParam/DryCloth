@@ -1,0 +1,44 @@
+<view class="continer">
+	<text>从上一个界面传递来的数据</text>
+	<view>
+		名字：<text>{{name}}   </text>
+		年龄：<text>{{age}}</text>
+	</view>
+	
+	<text>轮播图片</text>
+	<swiper indicator-dots="true" autoplay="true" interval="2000">
+		<block wx:for="{{background}}">
+			<swiper-item>
+				<image class="swiper_item swiper_item_{{item}}">
+				</image>
+			</swiper-item>
+		</block>
+	</swiper>
+
+	<text>Switch</text>
+	<view>
+		<switch wx:for="{{switchArray}}">{{item.id}}</switch>
+	</view>
+	<button bindtap="click_switch">增加Switch按钮</button>
+
+	<text>Template模版</text>
+	<template name="rowsSquares">
+		<view style="display: flex; flex-direction: row">
+			<view class="tem_item bc_{{color1}}"></view>
+			<view class="tem_item bc_{{color2}}"></view>
+			<view class="tem_item bc_{{color3}}"></view>
+		</view>
+	</template>
+	<text>第一种使用模版的方式</text>
+	<template is="rowsSquares" data="{{color1,color2,color3}}"></template>
+
+	<text>第二种使用模版的方式</text>
+	<template is="rowsSquares" data="{{...colorItem}}">
+	</template>
+	<text>在上面的所有方式中，使用data参数传递参数的是都，变量的顺序打乱传入没有关系，但是变量名称一定要相同，否则，没有效果</text>
+
+	<button bindtap="nextPage">跳转至下一页</button>
+
+
+
+</view>

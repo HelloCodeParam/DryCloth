@@ -1,0 +1,65 @@
+<view class="continer">
+	<text>Input输入框详解</text>
+	<input type="text" placeholder="请输入姓名" bindinput="showthistext" bindfocus="focus" bindblur="blur" placeholder-class="placeholder_class"/>
+	<view>
+		<text>{{showtext}}</text>
+	</view>
+	<text>几种格式的input</text>
+	<input type="number" placeholder="数字input" placeholder-class="placeholder_class"/>
+	<input type="idcard" placeholder="idcardinput" placeholder-class="placeholder_class"/>
+	<input type="digit" placeholder="带有小数点的数字input" placeholder-class="placeholder_class"/>
+	<input type="emoji" placeholder="表情" placeholder-class="placeholder_class"/>
+
+	<text>radio单选组件</text>
+	<radio-group bindchange="radiochange">
+		<radio wx:for="{{radiotext}}" checked="{{item.checked}}" value="{{item.name}}">
+			{{item.value}}
+		</radio>
+	</radio-group>
+
+	<text>switch</text>
+	<switch bindchange="switchchange">
+		开
+	</switch>
+	<text class="text_left">switch状态为：{{switchstatus}}</text>
+
+	<text>Picker选择器</text>
+	<view>
+		<text>selector属性</text>
+		<picker range="{{array}}" value="{{index}}" bindchange="changetime">
+			<view>
+				<text class="choose">{{array[index]}}</text>
+			</view>
+		</picker>
+	</view>
+
+	<view>
+		<text>time属性</text>
+		<picker mode="time" value="12:01" start="{{timestart}}" end="{{timeend}}" bindchange="changetime2">
+			<view>
+				<text class="choose">{{time}}</text>
+			</view>
+		</picker>
+	</view>
+
+	<view>
+		<text>date属性</text>
+		<picker mode="date" value="2016-01-04" start="{{datestart}}" end="{{dateend}}" bindchange="changetime3">
+			<view>
+				<text class="choose">{{date}}</text>
+			</view>
+		</picker>
+	</view>
+
+	<view class="intro_text">
+		<textarea class="textarea">
+			对于picker控件的使用说明：\n
+			属性1：mode可选属性有：data、time、selector...
+			其中在selector中的特有的属性：range，这是因为，selector是自定义的picker所以，要有一个数据源，而这个数据源就是有range来指定的。\n
+			在所有的mode属性当中都有value属性，指明初始值。
+		</textarea>
+	</view>
+
+	<button type="primary" bindtap="gonext">跳转</button>
+
+</view>

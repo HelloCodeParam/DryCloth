@@ -1,0 +1,12 @@
+<view class="continer">
+	
+	<text>Https请求</text>
+	<view wx:for="{{idea}}"> 
+		<view>名称：{{item.fileName}}</view>
+		<view>封面路径：{{item.picPath}}</view>
+		<view>时间：{{item.time}}</view>
+	</view>
+
+	<button type="primary" bindtap="showNext">GoNext Page</button>
+
+</view>

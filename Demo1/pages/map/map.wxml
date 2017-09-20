@@ -1,0 +1,28 @@
+<view class="continer">
+	
+	<text>使用微信内置的地图</text>
+	<button bindtap="clickToMap">点击打开内置地图</button>
+
+	<text>H5中的flex</text>
+	<view class="all_items">
+		<view class="items">
+		<view class="item1">
+			1
+		</view>
+		<view class="item1">
+			2
+		</view>
+		<view class="item1">
+			3
+		</view>
+		<view class="item1">
+			4
+		</view>
+		</view>
+	</view>
+
+	<text>获取到用户信息</text>
+	<button type="primary" bindtap="getUserInfo">获取信息</button>
+	<text>{{openId}}</text>
+
+</view>

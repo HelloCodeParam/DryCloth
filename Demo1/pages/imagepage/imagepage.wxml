@@ -1,0 +1,40 @@
+<view class="continer">
+	
+	<text>选择图像，可预览</text>
+	<button type="warn" bindtap="selectImage">选择图像</button>
+	
+	<view>
+		<image src="{{imagePath}}" bindtap="lookImage" mode="aspectFit" class="selectImage">
+		</image>
+	</view>
+	
+	<text>音乐操作</text>
+	<audio src="{{src}}" poster="https://www.mokeylife.cn/upload/713236.jpg" name="Weekend" author="朱朝阳" id="myAudio" controls></audio>
+
+	<view>
+		<text>同步存取key-value</text>
+		<input type="text" name="text" bindblur="savechange" placeholder="value"/>
+		<button type="primary" bindtap="save">确定保存</button>
+		<text>{{look}}</text>
+		<button type="warn" bindtap="lookSomeValue">读取数据</button>
+		<button size="mini" type="primary" bindtap="getInfo">获取存储信息</button>
+		<button size="mini" type="primary" bindtap="removeKeyValue">删除指定Key-Value</button>
+		<button type="warn" size="mini" bindtap="clearAll">删除所有缓存数据</button>
+	</view>
+
+	<view class="showIntro">
+		<textarea>
+			关于小程序中，缓存的问题：\n
+			1、写入缓存中，有两种方式：同步缓存和异步缓存。\n
+			而其中的重要区别在于：异步缓存在操作中，有回调函\n数，这些回调函数中可以包括很多的信息。\n
+			2、小程序中的缓存是全局性的，而不是一个页面都有一\n个缓存的存在，小程序中的缓存大小为：10240KB，约\n为10M。\n
+			3、在小程序中：当要删除某一个key的时候，就算key不\n存在，依然也是可以执行代码的（不会因为删除的key\n不存在，而存在报错）。\n
+			4、在本案例中，Key-Value中的数据，key数据也是放在\ndata变量中的，以后的真正开发项目中，并不需要这\n样，而是在什么时候使用setStorage的时候，什么时候\n，单独直接赋值key数据在key的属性后面\n
+		</textarea>
+	</view>
+	
+	<view>
+		<button bindtap="goNext">GoNext</button>
+	</view>
+ 
+</view>

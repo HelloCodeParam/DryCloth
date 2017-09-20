@@ -1,0 +1,40 @@
+<view class="continer">
+
+	<text>JS对于数组的操作</text>
+	<view>
+		<text style="color: {{color}}">{{text}}</text>
+		<button bindtap="addRow">添加一行</button>
+		<button bindtap="deleteRow">删除一行</button>
+		<button bindtap="change_color">设置字体颜色</button>
+	</view>
+
+	<text>系统内置图标</text>
+	<view>
+		<block wx:for="{{icons}}">
+			<icon color="{{color}}" size="{{size}}" type="{{item}}"></icon>
+		</block>
+	</view>
+
+	<text>深究按钮</text>
+	<view class="buttons">
+		<button size="default">default</button>
+		<button size="mini">mini</button>
+		<button type="primary">primary</button>
+		<button type="warn">warn</button>
+		<button type="default">default</button>
+		<button type="warn" loading="true">Loading</button>
+	</view>
+
+	<text>CheckBox</text>
+	<view>
+		<checkbox-group bindchange="checkboxchange">
+			<checkbox checked="{{item.checked}}" value="{{item.name}}" wx:for="{{checkboxitems}}">
+				{{item.value}}
+			</checkbox>
+		</checkbox-group>
+	</view>
+	<text>checkbox中要注意，传入后台的是name属性</text>
+
+	<button bindtap="btn_go">navigateto</button>
+
+</view>

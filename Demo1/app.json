@@ -1,0 +1,19 @@
+{
+  "pages":[
+    "pages/map/map",
+    "pages/alert/alert",
+    "pages/daohang/daohang",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/jspage/jspage",
+    "pages/inpage/inpage",
+    "pages/form/form",
+    "pages/imagepage/imagepage"    
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}

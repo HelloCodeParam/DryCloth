@@ -1,0 +1,35 @@
+<view class="continer">
+	<form catchsubmit="fromSubmit">
+		<input type="text" placeholder="Please input here" name="text"/>
+
+		<checkbox-group name="city" bindchange="checkboxchange">
+			<checkbox wx:for="{{arrays}}" checked="{{item.checked}}" value="{{item.name}}">
+				{{item.value}}
+			</checkbox>
+		</checkbox-group>
+
+		<radio-group name="sex" bindchange="radiochange">
+			<radio wx:for="{{sex}}" value="{{item}}">
+				{{item}}
+			</radio>
+		</radio-group>
+
+		<textarea name="textarea" class="textarea"></textarea>
+
+		<button formType="submit" type="primary">submit</button>
+		<button formType="reset" type="warn">reset</button>
+	</form>
+
+	<view class="showres">
+		<text>结果:\n</text>
+		<text>姓名：{{name}}\n</text>
+		<text>城市：{{city}}\n</text>
+		<text>性别：{{sex}}\n</text>
+		<text>签名: {{textarea}}</text>
+	</view>
+
+	<view>
+		<button type="primary" bindtap="goNext">Go Next</button>
+	</view>
+
+</view>

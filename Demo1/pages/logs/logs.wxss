@@ -1,0 +1,29 @@
+.swiper_item{
+	width: 100%;
+	height: 200px;
+}
+.swiper_item_green{
+	background-color: green;
+}
+.swiper_item_yellow{
+	background-color: yellow;
+}
+.swiper_item_red{
+	background-color: red;
+}
+switch{
+	display: block;
+}
+.tem_item{
+	width: 100px;
+	height: 100px;
+}
+.bc_green{
+	background-color: green;
+}
+.bc_yellow{
+	background-color: yellow;
+}
+.bc_red{
+	background-color: red;
+}
